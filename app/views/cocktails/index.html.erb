@@ -1,6 +1,6 @@
   <%= render 'banner', cocktail: @cocktail %>
 
-<div class="container" name="menu">
+<div class="container">
   <div class="content" style="text-align: center;">
   <h1>Cocktails</h1>
 
@@ -8,8 +8,8 @@
 
   <img src="<%= cl_image_path cocktail.photo %>" alt="" style="border-radius: 15px;">
   <br>
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
-<!--     <%= link_to edit_cocktail_path(cocktail), class: "icon" do %>
+<!--     <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <%= link_to edit_cocktail_path(cocktail), class: "icon" do %>
       <i class="fas fa-edit"></i>
   <% end %> -->
 
