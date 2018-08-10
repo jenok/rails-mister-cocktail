@@ -38,6 +38,12 @@ gem 'jbuilder', '~> 2.5'
 # Use dotenv for API security
 gem 'dotenv-rails', groups: [:development, :test]
 
+# Use cloudinary for uploading pictures
+gem 'cloudinary'
+
+# Use carrierwave for uploading pictures to heroku server
+gem 'carrierwave', '~> 1.2'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

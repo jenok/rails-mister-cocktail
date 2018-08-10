@@ -1,23 +1,30 @@
+  <%= render 'banner', cocktail: @cocktail %>
+
 <div class="container">
-<h1>Cocktails</h1>
+  <div class="content" style="text-align: center;">
+  <h1>Cocktails</h1>
 
 
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
     <%= link_to edit_cocktail_path(cocktail), class: "icon" do %>
-  <i class="fas fa-edit"></i>
+      <i class="fas fa-edit"></i>
+  <% end %>
 
   <%= link_to cocktail_path(cocktail),
     method: :delete,
     data: {confirm: "Are you sure?"}, class: "icon" do %>
-  <i class="fas fa-trash-alt"></i>
+    <i class="fas fa-trash-alt"></i>
   <% end %>
-
   <br>
   <% end %>
-<% end %>
 
+
+
+<%= link_to "Add a new cocktail", new_cocktail_path, class: "btn btn-secondary" %>
 <hr>
 <br>
-<%= link_to "add a new cocktail", new_cocktail_path %>
 </div>
+</div>
+
+  <%= render 'footer', cocktail: @cocktail %>
