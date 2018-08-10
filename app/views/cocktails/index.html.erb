@@ -6,7 +6,7 @@
 
   <% @cocktails.each do |cocktail| %>
 
-  <img src="<%= cl_image_path cocktail.photo %>" alt="" style="border-radius: 15px;">
+  <img src="<%= cl_image_path cocktail.photo unless cocktail.photo.blank? %>" alt="" style="border-radius: 15px;">
   <br>
  <%= link_to cocktail.name, cocktail_path(cocktail) %>
     <%= link_to edit_cocktail_path(cocktail), class: "icon" do %>
